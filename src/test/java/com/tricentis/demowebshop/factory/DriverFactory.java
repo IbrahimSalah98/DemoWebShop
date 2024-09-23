@@ -14,6 +14,10 @@ public class DriverFactory {
          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
          driver.manage().window().maximize();
          return driver;
+
+
+
+         
      }
 
 }
