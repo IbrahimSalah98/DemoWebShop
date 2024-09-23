@@ -1,6 +1,7 @@
 package com.tricentis.demowebshop.testcases;
 
 
+
 import com.tricentis.demowebshop.base.BaseTest;
 import com.tricentis.demowebshop.factory.DriverFactory;
 import com.tricentis.demowebshop.pages.LoginPage;
@@ -14,7 +15,7 @@ import org.testng.asserts.Assertion;
 
 import java.time.Duration;
 
-public class LoginTest extends BaseTest {
+public class LoginTest  extends BaseTest {
 
 
 
@@ -22,6 +23,7 @@ public class LoginTest extends BaseTest {
     public void shouldBeAbleToLoginWithEmailandPassword()  {
 
         driver.get("https://demowebshop.tricentis.com/login");
+
         LoginPage loginPage =new LoginPage(driver);
         loginPage.loginFunction();
         String logout =  driver.findElement(By.cssSelector("[href=\"/logout\"]")).getText();

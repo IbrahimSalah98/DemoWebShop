@@ -6,21 +6,21 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
+     protected   WebDriver driver;
 
-    protected WebDriver driver ;
-
-    @BeforeMethod
-
-   public void setup(){
-        driver=new DriverFactory().initializeDriver();
+     @BeforeMethod
+    public void setDriver() {
+         driver = new DriverFactory().initializeDriver();
     }
+
 
 
     @AfterMethod
 
-    public void tearDown(){
+    public void quit (){
         driver.quit();
     }
+
 
 
 }

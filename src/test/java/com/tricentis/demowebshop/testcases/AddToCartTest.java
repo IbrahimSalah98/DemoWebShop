@@ -1,6 +1,6 @@
 package com.tricentis.demowebshop.testcases;
 
-import com.tricentis.demowebshop.base.BaseTest;
+
 import com.tricentis.demowebshop.factory.DriverFactory;
 import com.tricentis.demowebshop.pages.HomePage;
 import com.tricentis.demowebshop.pages.LoginPage;
@@ -9,9 +9,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-public class AddToCartTest extends BaseTest {
+public class AddToCartTest  {
     @Test
             public void souldBeAbleToaddToCart (){
+
+        WebDriver driver = new DriverFactory().initializeDriver();
 
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage = new LoginPage(driver);

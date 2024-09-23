@@ -1,5 +1,4 @@
 package com.tricentis.demowebshop.testcases;
-
 import com.tricentis.demowebshop.base.BaseTest;
 import com.tricentis.demowebshop.factory.DriverFactory;
 import com.tricentis.demowebshop.pages.HomePage;
