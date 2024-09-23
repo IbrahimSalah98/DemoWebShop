@@ -26,6 +26,9 @@ public class LoginTest  {
         String logout =  driver.findElement(By.cssSelector("[href=\"/logout\"]")).getText();
         System.out.println(logout);
         Assert.assertEquals(logout , "Log out");
+
+
+//        hhhh
     }
 
 
