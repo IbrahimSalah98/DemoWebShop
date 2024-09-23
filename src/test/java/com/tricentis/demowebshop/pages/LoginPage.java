@@ -9,7 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class LoginPage  {
+public class LoginPage   {
 
        public LoginPage (WebDriver hima) {
 

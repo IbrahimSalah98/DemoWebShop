@@ -1,6 +1,7 @@
 package com.tricentis.demowebshop.testcases;
 
 
+import com.tricentis.demowebshop.base.BaseTest;
 import com.tricentis.demowebshop.factory.DriverFactory;
 import com.tricentis.demowebshop.pages.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -13,13 +14,13 @@ import org.testng.asserts.Assertion;
 
 import java.time.Duration;
 
-public class LoginTest  {
+public class LoginTest extends BaseTest {
 
 
 
     @Test
     public void shouldBeAbleToLoginWithEmailandPassword()  {
-        WebDriver driver = new DriverFactory().initializeDriver();
+
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage =new LoginPage(driver);
         loginPage.loginFunction();
