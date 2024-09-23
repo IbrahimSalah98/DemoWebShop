@@ -21,5 +21,10 @@ public class HomePageTest {
         boolean lap = driver.findElement(By.linkText("14.1-inch Laptop")).isDisplayed();
        Assert.assertEquals(lap , true);
         driver.quit();
+
+
+
+
+        //comment
     }
 }
