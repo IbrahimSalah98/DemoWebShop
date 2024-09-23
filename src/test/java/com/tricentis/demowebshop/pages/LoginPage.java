@@ -1,6 +1,7 @@
 package com.tricentis.demowebshop.pages;
 
 
+import com.tricentis.demowebshop.base.BasePage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,16 +10,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class LoginPage   {
+public class LoginPage extends BasePage {
 
-       public LoginPage (WebDriver hima) {
 
-           PageFactory.initElements(hima , this);
 
-       }
-
-       public LoginPage ()
+       public LoginPage (WebDriver driver)
        {
+           super(driver);
 
        }
 

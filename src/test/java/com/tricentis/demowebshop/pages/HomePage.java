@@ -1,12 +1,13 @@
 package com.tricentis.demowebshop.pages;
 
+import com.tricentis.demowebshop.base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
+public class HomePage extends BasePage {
 
    @FindBy (css = "[id=\"small-searchterms\"]")
    private WebElement searchInput ;
@@ -14,8 +15,9 @@ public class HomePage {
    private WebElement searchBtn ;
 
     public HomePage(WebDriver driver) {
-       PageFactory.initElements(driver,this);
+        super(driver);
     }
+
 
     public void searchInput (){
         searchInput.sendKeys("laptop");

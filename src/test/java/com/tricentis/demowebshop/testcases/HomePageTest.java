@@ -1,5 +1,6 @@
 package com.tricentis.demowebshop.testcases;
 
+import com.tricentis.demowebshop.base.BasePage;
 import com.tricentis.demowebshop.base.BaseTest;
 import com.tricentis.demowebshop.factory.DriverFactory;
 import com.tricentis.demowebshop.pages.HomePage;
@@ -10,6 +11,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class HomePageTest extends BaseTest {
+
+
     @Test
     public void shouldBeAbleToSearchForItems(){
 

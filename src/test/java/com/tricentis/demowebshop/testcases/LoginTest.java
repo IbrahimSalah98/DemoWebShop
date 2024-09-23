@@ -1,6 +1,7 @@
 package com.tricentis.demowebshop.testcases;
 
 
+import com.tricentis.demowebshop.base.BasePage;
 import com.tricentis.demowebshop.base.BaseTest;
 import com.tricentis.demowebshop.factory.DriverFactory;
 import com.tricentis.demowebshop.pages.LoginPage;
@@ -14,9 +15,12 @@ import org.testng.asserts.Assertion;
 
 import java.time.Duration;
 
-public class LoginTest extends BaseTest {
+public class LoginTest extends BasePage {
 
 
+    public LoginTest(WebDriver driver) {
+        super(driver);
+    }
 
     @Test
     public void shouldBeAbleToLoginWithEmailandPassword()  {
@@ -29,11 +33,4 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(logout , "Log out");
 
     }
-
-
-
-
-
-
-
 }

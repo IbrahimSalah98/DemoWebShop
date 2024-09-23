@@ -15,8 +15,8 @@ public class ProductA {
 @FindBy (css = "[id=\"addtocart_31_EnteredQuantity\"]")
 WebElement changeQuantity ;
 
-    public ProductA(WebDriver driver) {
-        PageFactory.initElements(driver,this);
+    public ProductA() {
+
     }
 
 
