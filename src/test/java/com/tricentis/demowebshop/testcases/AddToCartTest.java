@@ -1,6 +1,7 @@
 package com.tricentis.demowebshop.testcases;
 
 
+import com.tricentis.demowebshop.base.BaseTest;
 import com.tricentis.demowebshop.factory.DriverFactory;
 import com.tricentis.demowebshop.pages.HomePage;
 import com.tricentis.demowebshop.pages.LoginPage;
@@ -9,11 +10,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-public class AddToCartTest  {
+public class AddToCartTest extends BaseTest {
     @Test
-            public void souldBeAbleToaddToCart (){
+            public void souldBeAbleToaddToCart () throws InterruptedException {
 
-        WebDriver driver = new DriverFactory().initializeDriver();
+
 
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage = new LoginPage(driver);
@@ -25,7 +26,8 @@ public class AddToCartTest  {
         ProductA productA = new ProductA(driver);
         productA.changeQuantity("3");
         productA.addToCart();
-        driver.quit();
+        Thread.sleep(10000);
+
 
     }
 
