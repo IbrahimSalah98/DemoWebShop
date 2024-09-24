@@ -30,6 +30,9 @@ public class LoginTest  extends BaseTest {
         System.out.println(logout);
         Assert.assertEquals(logout , "Log out");
 
+
+        
+
     }
 
 
