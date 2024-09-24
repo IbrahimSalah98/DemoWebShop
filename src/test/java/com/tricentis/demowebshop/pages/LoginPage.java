@@ -9,16 +9,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class LoginPage  {
+public class LoginPage   {
 
-       public LoginPage (WebDriver hima) {
+       public LoginPage (WebDriver driver) {
 
-           PageFactory.initElements(hima , this);
-
-       }
-
-       public LoginPage ()
-       {
+           PageFactory.initElements(driver , this);
 
        }
 
@@ -31,6 +26,7 @@ public class LoginPage  {
 
         @FindBy (css = "[value=\"Log in\"]")
         WebElement loginBtn ;
+
 
 
     public void emailInput (String email) {
@@ -54,8 +50,5 @@ public class LoginPage  {
         passwordInput("Hima2015");
         loginBtn();
     }
-
-
-
 
 }
