@@ -27,8 +27,7 @@ public class LoginTest  {
         System.out.println(logout);
         Assert.assertEquals(logout , "Log out");
 
-
-//        hhhh
+        driver.quit();
     }
 
 

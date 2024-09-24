@@ -22,9 +22,7 @@ public class AddToCartTest {
         ProductA productA = new ProductA(driver);
         productA.changeQuantity("3");
         productA.addToCart();
-
-
-
+        driver.quit();
 
     }
 
