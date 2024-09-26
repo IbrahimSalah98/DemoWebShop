@@ -18,6 +18,7 @@ public class AddToCartTest extends BaseTest {
 
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage = new LoginPage(driver);
+
         loginPage.loginFunction();
         HomePage homePage = new HomePage(driver);
         homePage.searchInput();
