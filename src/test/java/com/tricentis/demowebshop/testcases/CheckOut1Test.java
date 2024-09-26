@@ -5,7 +5,7 @@ import com.tricentis.demowebshop.pages.*;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-public class CheckOutTest extends BaseTest {
+public class CheckOut1Test extends BaseTest {
 @Test
     public void CheckOutPage1() throws InterruptedException {
 

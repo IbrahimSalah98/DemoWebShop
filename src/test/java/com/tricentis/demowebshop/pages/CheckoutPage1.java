@@ -27,7 +27,7 @@ public class CheckoutPage1 {
     public CheckoutPage1(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
-    
+
     public void selectCountryByIndex(int index) {
         Select selectCountryDropDown = new Select(selectCountry);
         selectCountryDropDown.selectByIndex(index);
