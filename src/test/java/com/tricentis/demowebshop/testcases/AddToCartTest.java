@@ -8,6 +8,7 @@ import com.tricentis.demowebshop.pages.LoginPage;
 import com.tricentis.demowebshop.pages.ProductA;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class AddToCartTest extends BaseTest {
@@ -28,6 +29,7 @@ public class AddToCartTest extends BaseTest {
         productA.addToCart();
         productA.shoppingCart();
         Thread.sleep(10000);
+
 
 
     }
