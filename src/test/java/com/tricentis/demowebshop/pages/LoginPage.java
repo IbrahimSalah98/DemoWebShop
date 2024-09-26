@@ -1,6 +1,7 @@
 package com.tricentis.demowebshop.pages;
 
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,6 +21,7 @@ public class LoginPage {
 
 
 
+
         @FindBy(css = "[id=\"Email\"]")
         WebElement emailInput ;
 
@@ -31,7 +33,8 @@ public class LoginPage {
 
 
 
-    public void emailInput (String email) {
+
+   public void emailInput (String email) {
 
 
         emailInput.sendKeys(email);
