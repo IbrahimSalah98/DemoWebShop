@@ -27,6 +27,8 @@ public class RegisterPage {
    private WebElement confirmPassword;
    @FindBy(css="[id=\"register-button\"]")
    private WebElement register;
+   @FindBy(css="[class=\"button-1 register-continue-button\"]")
+   private WebElement register_continueBU;
 
 
    public void gendermale(){
@@ -55,7 +57,11 @@ public class RegisterPage {
     public void register(){
         register.click();
     }
-//    String firstname=new Faker().name().firstName();
+    public void register_continueBU(){
+        register_continueBU.click();
+    }
+
+    //    String firstname=new Faker().name().firstName();
 //    String lastname=new Faker().name().lastName();
     String Email=new Faker().internet().emailAddress();
     String Password=new Faker().internet().password();

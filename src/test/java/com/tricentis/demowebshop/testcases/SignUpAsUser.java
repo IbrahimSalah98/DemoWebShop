@@ -14,6 +14,7 @@ public class SignUpAsUser extends BaseTest {
        driver.get("https://demowebshop.tricentis.com/register");
        RegisterPage registerPage= new RegisterPage(driver);
        registerPage.RegisterFN();
-       Thread.sleep(1000);
+       registerPage.register_continueBU();
+       Thread.sleep(10000);
    }
 }
