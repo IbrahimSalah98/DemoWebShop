@@ -35,8 +35,6 @@ public class LoginPage   {
         emailInput.sendKeys(email);
     }
 
-
-
     public void passwordInput (String pass){
         passwordInput.sendKeys(pass);
     }
