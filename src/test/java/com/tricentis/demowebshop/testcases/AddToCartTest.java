@@ -40,9 +40,9 @@ public class AddToCartTest extends BaseTest{
 
     @Test
     public void fjdb() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver() ;
-        Thread.sleep(1000);
+//        WebDriverManager.chromedriver().setup();
+//        WebDriver driver = new ChromeDriver() ;
+//        Thread.sleep(1000);
         driver.get("https://demowebshop.tricentis.com/login");
         driver.findElement(By.cssSelector("[id=\"Email\"]")).sendKeys("ibrahim@salah.com");
         Thread.sleep(1000);
