@@ -35,7 +35,7 @@ public class AddToCartTest extends BaseTest{
         productA.shoppingCart();
         Thread.sleep(10000);
 
-        Thread.sleep(100000);
+//        Thread.sleep(100000);
     }
 
     @Test
