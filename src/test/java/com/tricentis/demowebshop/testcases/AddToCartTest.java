@@ -9,14 +9,14 @@ import com.tricentis.demowebshop.pages.ProductA;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-<<<<<<< Updated upstream
+
 import org.openqa.selenium.WebElement;
-=======
+
 import org.openqa.selenium.chrome.ChromeDriver;
->>>>>>> Stashed changes
+
 import org.testng.annotations.Test;
 
-public class AddToCartTest  {
+public class AddToCartTest extends BaseTest{
 
     @Test
     public void souldBeAbleToaddToCart () throws InterruptedException {
@@ -31,10 +31,10 @@ public class AddToCartTest  {
         ProductA productA = new ProductA(driver);
         productA.changeQuantity("3");
         productA.addToCart();
-<<<<<<< Updated upstream
+
         productA.shoppingCart();
         Thread.sleep(10000);
-=======
+
         Thread.sleep(100000);
     }
 
@@ -49,7 +49,7 @@ public class AddToCartTest  {
         driver.findElement(By.cssSelector("[id=\"Password\"]")).sendKeys("Hima2015");
         Thread.sleep(1000);
         driver.findElement(By.cssSelector("[value=\"Log in\"]")).click();
->>>>>>> Stashed changes
+
 
 
 
