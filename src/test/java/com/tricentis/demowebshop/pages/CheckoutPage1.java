@@ -24,8 +24,16 @@ public class CheckoutPage1 {
     WebElement clickContinue;
     @FindBy(css = "[id=\"PickUpInStore\"]")
     WebElement pickUp ;
-   /* @FindBy(css = "[class=\"button-1 new-address-next-step-button\"]")
-    WebElement continueButton; */
+    @FindBy(css = "[onclick=\"Shipping.save()\"]")
+    WebElement continueButton;
+    @FindBy(css = "[class=\"button-1 payment-method-next-step-button\"]")
+    WebElement continuePayment;
+    @FindBy(css = "[onclick=\"PaymentInfo.save()\"]")
+    WebElement continuePaymentInfo;
+    @FindBy(css = "[onclick=\"ConfirmOrder.save()\"]")
+    WebElement confirmOrder;
+    @FindBy(css = "[onclick=\"setLocation('/')\"]")
+    WebElement lastContinue;
 
 
 
@@ -62,11 +70,23 @@ public class CheckoutPage1 {
         pickUp.click();
     }
 
-   /* public void continueButton() {
+   public void continueButton() {
         continueButton.click();
-    }*/
+    }
+    public void continuePayment() {
+        continuePayment.click();
+    }
+    public void continuePaymentInfo() {
+        continuePaymentInfo.click();
+    }
+    public void confirmOrder() {
+        confirmOrder.click();
+    }
+    public void lastContinue() {
+        lastContinue.click();
+    }
 
-    public void fillAddressDetails() {
+    public void fillAddressDetails() throws InterruptedException {
         selectCountryByIndex(63);
         enterCity("Qena");
         enterAddress1("Qena Street");
@@ -74,7 +94,14 @@ public class CheckoutPage1 {
         enterPhoneNumber("0123456789");
         clickContinue();
         pickUp();
-       // continueButton();
+       // Thread.sleep(1000);
+        continueButton();
+       // Thread.sleep(1000);
+        continuePayment();
+        continuePaymentInfo();
+        confirmOrder();
+        Thread.sleep(500);
+        lastContinue();
     }
 
 

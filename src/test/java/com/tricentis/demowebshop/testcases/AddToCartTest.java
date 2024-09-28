@@ -22,7 +22,6 @@ public class AddToCartTest extends BaseTest{
     public void souldBeAbleToaddToCart () throws InterruptedException {
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage = new LoginPage(driver);
-
         loginPage.loginFunction();
         HomePage homePage = new HomePage(driver);
         homePage.searchInput();
@@ -34,15 +33,10 @@ public class AddToCartTest extends BaseTest{
 
         productA.shoppingCart();
         Thread.sleep(10000);
-
-        Thread.sleep(100000);
     }
 
     @Test
     public void fjdb() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver() ;
-        Thread.sleep(1000);
         driver.get("https://demowebshop.tricentis.com/login");
         driver.findElement(By.cssSelector("[id=\"Email\"]")).sendKeys("ibrahim@salah.com");
         Thread.sleep(1000);
