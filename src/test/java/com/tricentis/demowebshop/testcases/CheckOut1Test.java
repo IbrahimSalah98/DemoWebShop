@@ -10,15 +10,18 @@ public class CheckOut1Test extends BaseTest {
     public void CheckOutPage1() throws InterruptedException {
 
 
-        driver.get("https://demowebshop.tricentis.com/login");
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.loginFunction();
+        //driver.get("https://demowebshop.tricentis.com/login");
+        driver.get("https://demowebshop.tricentis.com/register");
+        RegisterPage registerPage= new RegisterPage(driver);
+        registerPage.RegisterFN();
+        //LoginPage loginPage = new LoginPage(driver);
+       // loginPage.loginFunction();
         HomePage homePage = new HomePage(driver);
         homePage.searchInput();
         homePage.searchBtn();
         driver.findElement(By.partialLinkText("Lap")).click();
         ProductA productA = new ProductA(driver);
-        productA.changeQuantity("3");
+        productA.changeQuantity("1");
         productA.addToCart();
         productA.shoppingCart();
         CartPage cartPage = new CartPage(driver);

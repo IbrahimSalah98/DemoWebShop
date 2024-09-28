@@ -22,6 +22,12 @@ public class CheckoutPage1 {
     WebElement phoneNumberInput;
     @FindBy(css = "[class=\"button-1 new-address-next-step-button\"]")
     WebElement clickContinue;
+    @FindBy(css = "[id=\"PickUpInStore\"]")
+    WebElement pickUp ;
+   /* @FindBy(css = "[class=\"button-1 new-address-next-step-button\"]")
+    WebElement continueButton; */
+
+
 
 
     public CheckoutPage1(WebDriver driver) {
@@ -52,6 +58,13 @@ public class CheckoutPage1 {
     public void clickContinue() {
         clickContinue.click();
     }
+    public void pickUp (){
+        pickUp.click();
+    }
+
+   /* public void continueButton() {
+        continueButton.click();
+    }*/
 
     public void fillAddressDetails() {
         selectCountryByIndex(63);
@@ -60,6 +73,8 @@ public class CheckoutPage1 {
         enterZipCode("12345");
         enterPhoneNumber("0123456789");
         clickContinue();
+        pickUp();
+       // continueButton();
     }
 
 
