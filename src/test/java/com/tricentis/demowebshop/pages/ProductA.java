@@ -28,7 +28,8 @@ WebElement changeQuantity ;
 }
 
 public void changeQuantity(String quantity){
-    changeQuantity.sendKeys(quantity);
+    changeQuantity.clear();
+            changeQuantity.sendKeys(quantity);
 }
 
     public void shoppingCart (){
