@@ -32,5 +32,5 @@ jobs:
         run: mvn clean install -e
 
       - name: Run with Maven
-        run: mvn clean test -e
+        run: mvn clean test 
 
