@@ -29,8 +29,11 @@ jobs:
           brew install chromedriver
 
       - name: Build with Maven
+        run: |
+          brew mvn clean install
+      - name : Build with Maven
         run: mvn clean install -e
 
       - name: Run with Maven
-        run: mvn clean test
+        run: mvn clean test -e
 
