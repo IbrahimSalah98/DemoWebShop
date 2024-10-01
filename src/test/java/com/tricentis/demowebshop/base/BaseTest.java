@@ -10,8 +10,8 @@ public class BaseTest {
 
      @BeforeMethod
     public void setDriver() {
-
          driver = new DriverFactory().initializeDriver();
+
     }
 
 

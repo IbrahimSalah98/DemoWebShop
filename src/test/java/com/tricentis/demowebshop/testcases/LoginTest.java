@@ -2,23 +2,20 @@ package com.tricentis.demowebshop.testcases;
 
 
 import com.tricentis.demowebshop.base.BaseTest;
-import com.tricentis.demowebshop.factory.DriverFactory;
+
 import com.tricentis.demowebshop.pages.LoginPage;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
 
-import java.time.Duration;
 
 public class LoginTest extends BaseTest {
 
 
 
-    @Test
+    @Test (description = "Test the login function with valid email and password")
     public void shouldBeAbleToLoginWithEmailandPassword()  {
 
         driver.get("https://demowebshop.tricentis.com/login");

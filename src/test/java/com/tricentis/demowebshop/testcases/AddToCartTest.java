@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 
 public class AddToCartTest extends BaseTest{
 
-    @Test
+    @Test (description = "Should be able to add product to cart ")
     public void souldBeAbleToaddToCart () throws InterruptedException {
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage = new LoginPage(driver);
@@ -33,26 +33,10 @@ public class AddToCartTest extends BaseTest{
         productA.addToCart();
 
         productA.shoppingCart();
-        Thread.sleep(10000);
+        Thread.sleep(1000);
 
-//        Thread.sleep(100000);
     }
 
-    @Test
-    public void fjdb() throws InterruptedException {
-//        WebDriverManager.chromedriver().setup();
-//        WebDriver driver = new ChromeDriver() ;
-//        Thread.sleep(1000);
-        driver.get("https://demowebshop.tricentis.com/login");
-        driver.findElement(By.cssSelector("[id=\"Email\"]")).sendKeys("ibrahim@salah.com");
-        Thread.sleep(1000);
-        driver.findElement(By.cssSelector("[id=\"Password\"]")).sendKeys("Hima2015");
-        Thread.sleep(1000);
-        driver.findElement(By.cssSelector("[value=\"Log in\"]")).click();
 
-
-
-
-    }
 
 }

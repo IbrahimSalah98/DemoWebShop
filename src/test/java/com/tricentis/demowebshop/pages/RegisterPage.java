@@ -61,14 +61,14 @@ public class RegisterPage {
         register_continueBU.click();
     }
 
-    //    String firstname=new Faker().name().firstName();
-//    String lastname=new Faker().name().lastName();
+        String firstname=new Faker().name().firstName();
+    String lastname=new Faker().name().lastName();
     String Email=new Faker().internet().emailAddress();
     String Password=new Faker().internet().password();
     public void RegisterFN(){
         gendermale();
-        firstName("ibrahim");
-        lastName("salah");
+        firstName(firstname);
+        lastName(lastname);
         email(Email);
         password(Password);
         confirmPassword(Password);

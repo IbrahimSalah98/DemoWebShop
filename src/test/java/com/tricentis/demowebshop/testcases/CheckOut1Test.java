@@ -29,7 +29,7 @@ public class CheckOut1Test extends BaseTest {
         cartPage.checkOut();
         CheckoutPage1 checkoutPage1= new CheckoutPage1(driver);
         checkoutPage1.fillAddressDetails();
-        Thread.sleep(10000);
+        Thread.sleep(1000);
 
 
     }

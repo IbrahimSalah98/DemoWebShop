@@ -17,17 +17,27 @@ public class CartTest extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginFunction();
         HomePage homePage = new HomePage(driver);
+        Thread.sleep(1000);
         homePage.searchInput();
+        Thread.sleep(1000);
         homePage.searchBtn();
+        Thread.sleep(1000);
         driver.findElement(By.partialLinkText("Lap")).click();
+        Thread.sleep(1000);
         ProductA productA = new ProductA(driver);
+        Thread.sleep(1000);
         productA.changeQuantity("3");
+        Thread.sleep(1000);
         productA.addToCart();
+        Thread.sleep(1000);
         productA.shoppingCart();
+        Thread.sleep(1000);
         CartPage cartPage = new CartPage(driver);
+        Thread.sleep(1000);
         cartPage.termOfService();
+        Thread.sleep(1000);
         cartPage.checkOut();
-        Thread.sleep(10000);
+        Thread.sleep(1000);
 
 
     }
