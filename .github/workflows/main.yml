@@ -21,16 +21,21 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-      - name: Install Chrome
+
+      - name: Download and Install Chrome v128
         run: |
-          brew install --cask google-chrome
-      - name: Install ChromeDriver
+          curl -L -o "googlechrome.dmg" https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
+          hdiutil attach googlechrome.dmg
+          sudo cp -r /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/
+
+      - name: Install ChromeDriver v128
         run: |
-          brew install chromedriver
+          curl -L -o "chromedriver_mac64.zip" https://chromedriver.storage.googleapis.com/128.0.5359.71/chromedriver_mac64.zip
+          unzip chromedriver_mac64.zip
+          sudo mv chromedriver /usr/local/bin/
 
       - name: Build with Maven
         run: mvn clean install -e
 
       - name: Run with Maven
         run: mvn clean test
-
