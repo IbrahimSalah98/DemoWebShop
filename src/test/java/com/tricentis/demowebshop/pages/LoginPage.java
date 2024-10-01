@@ -30,6 +30,8 @@ public class LoginPage {
 
         @FindBy (css = "[value=\"Log in\"]")
         WebElement loginBtn ;
+        @FindBy (css = "[href=\"/logout\"]")
+        WebElement logoutBtn ;
 
 
 
@@ -50,10 +52,16 @@ public class LoginPage {
         loginBtn.click();
     }
 
-    public void loginFunction (){
+    public void logoutBtn(){
+       logoutBtn.click();
+    }
+
+    public void loginFunction ()  {
         emailInput("ibrahim@salah.com");
         passwordInput("Hima2015");
         loginBtn();
+
     }
+
 
 }
