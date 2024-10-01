@@ -11,6 +11,7 @@ public class BaseTest {
      @BeforeMethod
     public void setDriver() {
          driver = new DriverFactory().initializeDriver();
+         driver.get("https://demowebshop.tricentis.com/register");
 
     }
 

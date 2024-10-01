@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class SignUpAsUserTest extends BaseTest {
    @Test
    public void shouldBeAbleToRegister() throws InterruptedException {
-       driver.get("https://demowebshop.tricentis.com/register");
+
        RegisterPage registerPage= new RegisterPage(driver);
        registerPage.RegisterFN();
        registerPage.register_continueBU();

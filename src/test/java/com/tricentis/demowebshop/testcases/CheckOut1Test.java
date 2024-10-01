@@ -11,7 +11,6 @@ public class CheckOut1Test extends BaseTest {
 
 
         //driver.get("https://demowebshop.tricentis.com/login");
-        driver.get("https://demowebshop.tricentis.com/register");
         RegisterPage registerPage= new RegisterPage(driver);
         registerPage.RegisterFN();
         //LoginPage loginPage = new LoginPage(driver);

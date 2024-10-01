@@ -6,6 +6,7 @@ import com.tricentis.demowebshop.factory.DriverFactory;
 import com.tricentis.demowebshop.pages.HomePage;
 import com.tricentis.demowebshop.pages.LoginPage;
 import com.tricentis.demowebshop.pages.ProductA;
+import com.tricentis.demowebshop.pages.RegisterPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,10 +21,10 @@ public class AddToCartTest extends BaseTest{
 
     @Test (description = "Should be able to add product to cart ")
     public void souldBeAbleToaddToCart () throws InterruptedException {
-        driver.get("https://demowebshop.tricentis.com/login");
-        LoginPage loginPage = new LoginPage(driver);
 
-        loginPage.loginFunction();
+        RegisterPage registerPage= new RegisterPage(driver);
+        registerPage.RegisterFN();
+        registerPage.register_continueBU();
         HomePage homePage = new HomePage(driver);
         homePage.searchInput();
         homePage.searchBtn();
