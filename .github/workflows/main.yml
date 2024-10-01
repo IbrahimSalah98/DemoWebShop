@@ -1,4 +1,4 @@
-name: Java CI with Maven on macOS
+name: Java CI with Maven on Windows
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: windows-latest  # Change from macOS to Windows
 
     steps:
       - name: Checkout code
@@ -22,17 +22,13 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Download and Install Chrome v128
+      - name: Install Chrome
         run: |
-          curl -L -o "googlechrome.dmg" https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg
-          hdiutil attach googlechrome.dmg
-          sudo cp -r /Volumes/Google\ Chrome/Google\ Chrome.app /Applications/
+          choco install googlechrome --no-progress  # Use Chocolatey to install Chrome on Windows
 
-      - name: Install ChromeDriver v128
+      - name: Install ChromeDriver
         run: |
-          curl -L -o "chromedriver_mac64.zip" https://chromedriver.storage.googleapis.com/128.0.5359.71/chromedriver_mac64.zip
-          unzip chromedriver_mac64.zip
-          sudo mv chromedriver /usr/local/bin/
+          choco install chromedriver --no-progress  # Install ChromeDriver on Windows
 
       - name: Build with Maven
         run: mvn clean install -e
