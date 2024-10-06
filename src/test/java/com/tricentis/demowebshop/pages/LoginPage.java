@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.v127.css.model.InheritedPseudoElementMatches;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+import org.testng.asserts.Assertion;
 
 
 public class LoginPage {
@@ -32,6 +34,9 @@ public class LoginPage {
         WebElement loginBtn ;
         @FindBy (css = "[href=\"/logout\"]")
         WebElement logoutBtn ;
+
+        @FindBy (css = "[class=\"message-error\"]")
+        WebElement errorMassage ;
 
 
 
@@ -60,6 +65,32 @@ public class LoginPage {
         emailInput("ibrahim@salah.com");
         passwordInput("Hima2015");
         loginBtn();
+
+    }
+
+    public void loginFunctionWithValidEmailandInvalidPassword ()  {
+        emailInput("ibrahim@salah.com");
+        passwordInput("Hima201");
+        loginBtn();
+        boolean checker =   errorMassage.isDisplayed();
+        Assert.assertEquals(checker,true);
+
+    }
+
+    public void loginFunctionWithInValidEmailandvalidPassword ()  {
+        emailInput("ibrahi@salah.com");
+        passwordInput("Hima2015");
+        loginBtn();
+        boolean checker =   errorMassage.isDisplayed();
+        Assert.assertEquals(checker,true);
+
+    }
+
+    public void checkErrorMessage () {
+       loginBtn.click();
+     boolean checker =   errorMassage.isDisplayed();
+      Assert.assertEquals(checker,true);
+
 
     }
 

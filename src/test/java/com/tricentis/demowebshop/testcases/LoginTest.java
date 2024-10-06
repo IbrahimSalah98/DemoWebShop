@@ -23,9 +23,36 @@ public class LoginTest extends BaseTest {
         loginPage.loginFunction();
         String logout =  driver.findElement(By.cssSelector("[href=\"/logout\"]")).getText();
         System.out.println(logout);
-       // Assert.assertEquals(logout , "Log out");
+        Assert.assertEquals(logout , "Log out");
         loginPage.logoutBtn();
     }
+
+
+    @Test
+    public void shouldNotBeAbleToLoginWhenEmailandPasswordAreBlank(){
+        driver.get("https://demowebshop.tricentis.com/login");
+        LoginPage loginPage =new LoginPage(driver);
+        loginPage.checkErrorMessage();
+    }
+
+    @Test
+    public void shouldNotBeAbleToLoginWithValidEmailandInvalidPassword (){
+        driver.get("https://demowebshop.tricentis.com/login");
+        LoginPage loginPage =new LoginPage(driver);
+        loginPage.loginFunctionWithInValidEmailandvalidPassword();
+
+    }
+
+
+    @Test
+    public void shouldNotBeAbleToLoginWithInvalidEmailandvalidPassword (){
+        driver.get("https://demowebshop.tricentis.com/login");
+        LoginPage loginPage =new LoginPage(driver);
+        loginPage.loginFunctionWithInValidEmailandvalidPassword();
+
+    }
+
+
 
 
 
