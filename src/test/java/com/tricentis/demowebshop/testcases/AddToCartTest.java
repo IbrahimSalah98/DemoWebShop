@@ -32,10 +32,8 @@ public class AddToCartTest extends BaseTest{
         ProductA productA = new ProductA(driver);
         productA.changeQuantity("3");
         productA.addToCart();
-
         productA.shoppingCart();
         Thread.sleep(1000);
-
     }
 
 

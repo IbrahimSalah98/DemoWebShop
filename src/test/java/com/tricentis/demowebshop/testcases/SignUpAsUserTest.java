@@ -71,6 +71,7 @@ public class SignUpAsUserTest extends BaseTest {
 
     @Test(description = "Verify_that_usr_canNot_SignUp_WithThepassword_and_confirmationpassword_donot_match",priority = 6)
     public void Verify_that_usr_canNot_SignUp_WithThepassword_and_confirmationpassword_donot_match() throws InterruptedException{
+
         RegisterPage registerPage=new RegisterPage(driver);
         registerPage.gendermale();
         String firstname=new Faker().name().firstName();
