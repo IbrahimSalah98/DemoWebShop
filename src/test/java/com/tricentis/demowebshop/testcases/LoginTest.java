@@ -15,8 +15,8 @@ public class LoginTest extends BaseTest {
 
 
 
-    @Test (description = "Test the login function with valid email and password")
-    public void shouldBeAbleToLoginWithEmailandPassword()  {
+    @Test (description = "Test the login function with valid email and password",priority = 1)
+    public void shouldBeAbleToLoginWithEmailandPassword(){
 
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage =new LoginPage(driver);
@@ -28,14 +28,14 @@ public class LoginTest extends BaseTest {
     }
 
 
-    @Test
+    @Test(priority = 2)
     public void shouldNotBeAbleToLoginWhenEmailandPasswordAreBlank(){
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage =new LoginPage(driver);
         loginPage.checkErrorMessage();
     }
 
-    @Test
+    @Test(priority = 3)
     public void shouldNotBeAbleToLoginWithValidEmailandInvalidPassword (){
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage =new LoginPage(driver);
@@ -44,7 +44,7 @@ public class LoginTest extends BaseTest {
     }
 
 
-    @Test
+    @Test(priority = 4)
     public void shouldNotBeAbleToLoginWithInvalidEmailandvalidPassword (){
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage =new LoginPage(driver);

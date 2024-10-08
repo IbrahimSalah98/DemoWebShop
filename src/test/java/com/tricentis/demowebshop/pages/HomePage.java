@@ -12,6 +12,8 @@ public class HomePage {
    private WebElement searchInput ;
    @FindBy (css = "[value=\"Search\"]")
    private WebElement searchBtn ;
+    @FindBy(css = "[class=\"cart-label\"]")
+    WebElement clickonShoppingcart;
 
     public HomePage(WebDriver driver) {
        PageFactory.initElements(driver,this);
@@ -28,6 +30,9 @@ public class HomePage {
     public void doSearch(){
         searchInput();
         searchBtn();
+    }
+    public void Shoppingcart(){
+        clickonShoppingcart.click();
     }
 
 
