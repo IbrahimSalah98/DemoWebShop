@@ -2,9 +2,11 @@ package com.tricentis.demowebshop.testcases;
 
 import com.tricentis.demowebshop.base.BaseTest;
 import com.tricentis.demowebshop.pages.*;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+@Feature("Checkout Feature")
 public class CheckOut1Test extends BaseTest {
 @Test
     public void CheckOutPage1() throws InterruptedException {

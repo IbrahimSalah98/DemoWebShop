@@ -10,6 +10,8 @@ public class CartPage {
     WebElement termOfService ;
     @FindBy(css = "[id=\"checkout\"]")
     WebElement checkOut ;
+    @FindBy (css = "name=\"itemquantity4638022\"")
+    WebElement removeItem;
 
     public CartPage(WebDriver driver) {
         PageFactory.initElements(driver,this);
@@ -18,4 +20,9 @@ public class CartPage {
         termOfService.click();
     }
     public void checkOut(){checkOut.click();}
+    public void removeItemFromCart (){
+        removeItem.clear();
+        removeItem.sendKeys("\n");
+    }
 }
+

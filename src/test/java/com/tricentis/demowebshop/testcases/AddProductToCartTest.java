@@ -2,22 +2,15 @@ package com.tricentis.demowebshop.testcases;
 
 
 import com.tricentis.demowebshop.base.BaseTest;
-import com.tricentis.demowebshop.factory.DriverFactory;
 import com.tricentis.demowebshop.pages.HomePage;
-import com.tricentis.demowebshop.pages.LoginPage;
 import com.tricentis.demowebshop.pages.ProductA;
 import com.tricentis.demowebshop.pages.RegisterPage;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-
-import org.openqa.selenium.WebElement;
-
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import org.testng.annotations.Test;
-
-public class AddToCartTest extends BaseTest{
+@Feature("Add To Cart Feature")
+public class AddProductToCartTest extends BaseTest{
 
     @Test (description = "Should be able to add product to cart ")
     public void souldBeAbleToaddToCart () throws InterruptedException {
@@ -35,6 +28,8 @@ public class AddToCartTest extends BaseTest{
         productA.shoppingCart();
         Thread.sleep(1000);
     }
+
+
 
 
 

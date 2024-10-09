@@ -5,12 +5,13 @@ import com.tricentis.demowebshop.base.BaseTest;
 
 import com.tricentis.demowebshop.pages.LoginPage;
 
+import io.qameta.allure.Feature;
 import org.openqa.selenium.By;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
+@Feature("Login Feature")
 public class LoginTest extends BaseTest {
 
 

@@ -3,9 +3,10 @@ package com.tricentis.demowebshop.testcases;
 import com.github.javafaker.Faker;
 import com.tricentis.demowebshop.base.BaseTest;
 import com.tricentis.demowebshop.pages.RegisterPage;
+import io.qameta.allure.Feature;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
+@Feature("Register Feature")
 public class SignUpAsUserTest extends BaseTest {
    @Test(description = "Verify Main Functionality",priority = 1)
    public void shouldBeAbleToRegister() throws InterruptedException {

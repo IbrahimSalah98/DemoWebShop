@@ -5,10 +5,11 @@ import com.tricentis.demowebshop.pages.CartPage;
 import com.tricentis.demowebshop.pages.HomePage;
 import com.tricentis.demowebshop.pages.LoginPage;
 import com.tricentis.demowebshop.pages.ProductA;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-
-public class CartTest extends BaseTest {
+@Feature("Cart Page")
+public class CartPageTest extends BaseTest {
     @Test
     public void cartPage() throws InterruptedException {
 
@@ -41,4 +42,8 @@ public class CartTest extends BaseTest {
 
 
     }
+  /*  @Test
+    public void removeItemFromCart(
+
+    )*/
 }
