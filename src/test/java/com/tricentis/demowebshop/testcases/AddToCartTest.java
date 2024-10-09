@@ -31,7 +31,7 @@ public class AddToCartTest extends BaseTest{
         homePage.searchBtn();
         driver.findElement(By.partialLinkText("Lap")).click();
         ProductA productA = new ProductA(driver);
-        productA.changeQuantity("3");
+        productA.changeQuantity("6");
         productA.addToCart();
         productA.shoppingCart();
         Thread.sleep(1000);

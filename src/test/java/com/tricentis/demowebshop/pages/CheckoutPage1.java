@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+
 public class CheckoutPage1 {
 
 
@@ -22,21 +23,53 @@ public class CheckoutPage1 {
     WebElement phoneNumberInput;
     @FindBy(css = "[class=\"button-1 new-address-next-step-button\"]")
     WebElement clickContinue;
+
     @FindBy(css = "[id=\"PickUpInStore\"]")
     WebElement pickUp ;
     @FindBy(css = "[onclick=\"Shipping.save()\"]")
     WebElement continueButton;
+
+    @FindBy(css = "[id=\"checkout-step-payment-method\"]")
+    WebElement Paymentmethod;
     @FindBy(css = "[class=\"button-1 payment-method-next-step-button\"]")
     WebElement continuePayment;
+    @FindBy(css = "[id=\"paymentmethod_1\"]")
+    WebElement CheckMoneyOrderPay;
+    @FindBy(css = "[id=\"paymentmethod_2\"]")
+    WebElement  CreditCardPay;
+    @FindBy(css = "[id=\"paymentmethod_3\"]")
+    WebElement PurchaseOrderPay;
+    @FindBy(css = "[class=\"info\"]")
+    WebElement PaymentInfoMes;
     @FindBy(css = "[onclick=\"PaymentInfo.save()\"]")
     WebElement continuePaymentInfo;
+
+
     @FindBy(css = "[onclick=\"ConfirmOrder.save()\"]")
     WebElement confirmOrder;
+
     @FindBy(css = "[onclick=\"setLocation('/')\"]")
     WebElement lastContinue;
 
+    @FindBy(css = "[id=\"shippingoption_0\"]")
+    WebElement ShippingmethodGround;
+    @FindBy(css = "[id=\"shippingoption_1\"]")
+    WebElement ShippingmethodNextDayAir;
+    @FindBy(css = "[id=\"shippingoption_2\"]")
+    WebElement Shippingmethod2ndDayAir;
+    @FindBy(css = "[onclick=\"ShippingMethod.save()\"]")
+    WebElement continueShippingmethod;
 
+// CreditCardType
+    @FindBy(css = "[id=\"CardholderName\"]")
+    WebElement CardholderNameField;
+    @FindBy(css = "[id=\"CardNumber\"]")
+    WebElement CardNumberField;
+    @FindBy(css = "[id=\"CardCode\"]")
+    WebElement CardCodeField;
 
+    @FindBy(css = "[id=\"PurchaseOrderNumber\"]")
+    WebElement PurchaseOrderNumberField;
 
     public CheckoutPage1(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -70,7 +103,7 @@ public class CheckoutPage1 {
         pickUp.click();
     }
 
-   public void continueButton() {
+    public void continueButton() {
         continueButton.click();
     }
     public void continuePayment() {
@@ -94,16 +127,66 @@ public class CheckoutPage1 {
         enterPhoneNumber("0123456789");
         clickContinue();
         pickUp();
-       // Thread.sleep(1000);
         continueButton();
-       // Thread.sleep(1000);
         continuePayment();
         continuePaymentInfo();
         confirmOrder();
         Thread.sleep(500);
         lastContinue();
     }
+    public void getShippingmethodGround(){
+        ShippingmethodGround.click();
+    }
+    public void continueShippingmethod(){
+        continueShippingmethod.click();
+    }
+    public String getPaymentmethod(){
+        return Paymentmethod.getText();
+    }
+    public void getShippingmethodNextDayAir(){
+        ShippingmethodNextDayAir.click();
+    }
+    public void getShippingmethod2ndDayAir(){
+        Shippingmethod2ndDayAir.click();
+    }
+    public void getCheckMoneyOrderPay(){
+        CheckMoneyOrderPay.click();
+    }
+    public void getCreditCardPay(){
+        CreditCardPay.click();
+    }
+    public void getPurchaseOrderPay(){
+        PurchaseOrderPay.click();
+    }
+    public String getPaymentInfoMes(){
+        return PaymentInfoMes.getText();
+    }
+    public void CardholderNameField(String CardholderName) {
+        CardholderNameField.sendKeys(CardholderName);
+    }
+    public void CardNumberField(String CardNumber) {
+        CardNumberField.sendKeys(CardNumber);
+    }
+    public void CardCodeField(String CardCode) {
+        CardCodeField.sendKeys(CardCode);
+    }
+    public void CardholderButtons(){
+        CardholderNameField("ibrahim salah");
+        CardNumberField("12344");
+        CardCodeField("1234");
+    }
+//    public void CardCodeField(){
+//        CardCodeField("1234");
+//    }
+public void PurchaseOrderNumberField(String PurchaseOrderNumber) {
+    PurchaseOrderNumberField.sendKeys(PurchaseOrderNumber);
+}
+
+
+
+
 
 
 
 }
+
