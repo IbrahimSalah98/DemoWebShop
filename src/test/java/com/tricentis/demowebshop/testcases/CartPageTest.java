@@ -5,11 +5,12 @@ import com.tricentis.demowebshop.pages.CartPage;
 import com.tricentis.demowebshop.pages.HomePage;
 import com.tricentis.demowebshop.pages.LoginPage;
 import com.tricentis.demowebshop.pages.ProductA;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-public class CartTest extends BaseTest {
+@Feature("Cart Feature")
+public class CartPageTest extends BaseTest {
     @Test(description = "Verify Main Functionality to cart", priority = 1)
     public void cartPage() throws InterruptedException {
 
