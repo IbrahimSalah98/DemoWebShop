@@ -45,7 +45,7 @@ public class HomePageTest extends BaseTest {
         homePage.changeToBooks();
         Assert.assertEquals(homePage.checkBook(), true);
         homePage.changeView();
-        Thread.sleep(1000);
+      //  Thread.sleep(1000);
     }
 }
 

@@ -27,7 +27,7 @@ public class AddProductToCartTest extends BaseTest{
         productA.changeQuantity("6");
         productA.addToCart();
         productA.shoppingCart();
-        Thread.sleep(1000);
+      //  Thread.sleep(1000);
     }
     @Test(description = "Verify_ThatErrorMessage_forProduct_isdisplay",priority = 2)
     public void Verify_ThatErrorMessage_forProduct_isdisplay() throws InterruptedException {
@@ -41,7 +41,7 @@ public class AddProductToCartTest extends BaseTest{
         ProductA productA = new ProductA(driver);
         productA.changeQuantity("0");
         productA.addToCart();
-        Thread.sleep(10000);
+     //   Thread.sleep(10000);
         Assert.assertEquals(productA.ShowProductErrorMessage(),"  Quantity should be positive");
         System.out.println(productA.displayProductErrorMessage());
         System.out.println(productA.ShowProductErrorMessage());
@@ -73,7 +73,7 @@ public class AddProductToCartTest extends BaseTest{
         ProductA productA = new ProductA(driver);
         productA.ClickOnAddtocomparelist();
         productA.ClickRemoveBU();
-        Thread.sleep(10000);
+      //  Thread.sleep(10000);
         Assert.assertEquals(productA.ShowMessagecompare(),"You have no items to compare.");
         System.out.println(productA.ShowMessagecompare());
         System.out.println(productA.displayMessagecompare());

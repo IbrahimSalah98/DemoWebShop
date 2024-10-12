@@ -57,12 +57,12 @@ public class CheckOut1Test extends BaseTest {
         checkoutPage1.clickContinue();
         checkoutPage1.continueButton();
         checkoutPage1.getShippingmethodGround();
-        Thread.sleep(1000);
+      //  Thread.sleep(1000);
         checkoutPage1.continueShippingmethod();
-        Thread.sleep(1000);
+      //  Thread.sleep(1000);
         checkoutPage1.getCheckMoneyOrderPay();
         checkoutPage1.continuePayment();
-        Thread.sleep(2000);
+      //  Thread.sleep(2000);
         Assert.assertNotEquals(checkoutPage1.getPaymentInfoMes(),null);
         System.out.println(checkoutPage1.getPaymentInfoMes());
 
@@ -83,12 +83,12 @@ public class CheckOut1Test extends BaseTest {
         checkoutPage1.clickContinue();
         checkoutPage1.continueButton();
         checkoutPage1.getShippingmethodNextDayAir();
-        Thread.sleep(1000);
+     //   Thread.sleep(1000);
         checkoutPage1.continueShippingmethod();
-        Thread.sleep(1000);
+      //  Thread.sleep(1000);
         checkoutPage1.getCreditCardPay();
         checkoutPage1.continuePayment();
-        Thread.sleep(2000);
+      //  Thread.sleep(2000);
         Assert.assertNotEquals(checkoutPage1.getPaymentmethod(),null);
         System.out.println(checkoutPage1.getPaymentmethod());
 
@@ -109,12 +109,12 @@ public class CheckOut1Test extends BaseTest {
         checkoutPage1.clickContinue();
         checkoutPage1.continueButton();
         checkoutPage1.getShippingmethod2ndDayAir();
-        Thread.sleep(1000);
+      //  Thread.sleep(1000);
         checkoutPage1.continueShippingmethod();
-        Thread.sleep(1000);
+      //  Thread.sleep(1000);
         checkoutPage1.getPurchaseOrderPay();
         checkoutPage1.continuePayment();
-        Thread.sleep(2000);
+      //  Thread.sleep(2000);
         Assert.assertNotEquals(checkoutPage1.getPaymentmethod(),null);
         System.out.println(checkoutPage1.getPaymentmethod());
 
@@ -175,15 +175,15 @@ public void Verify_ThatUserCan_Enter_PurchaseOrderNumber() throws InterruptedExc
     checkoutPage1.clickContinue();
     checkoutPage1.continueButton();
     checkoutPage1.getShippingmethod2ndDayAir();
-    Thread.sleep(1000);
+  //  Thread.sleep(1000);
     checkoutPage1.continueShippingmethod();
-    Thread.sleep(1000);
+ //   Thread.sleep(1000);
     checkoutPage1.getPurchaseOrderPay();
     checkoutPage1.continuePayment();
-    Thread.sleep(2000);
+ //   Thread.sleep(2000);
     checkoutPage1.PurchaseOrderNumberField("123456");
     checkoutPage1.continuePaymentInfo();
-    Thread.sleep(1000);
+ //   Thread.sleep(1000);
 
 }
 

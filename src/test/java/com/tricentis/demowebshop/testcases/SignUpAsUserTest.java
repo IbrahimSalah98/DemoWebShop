@@ -26,7 +26,7 @@ public class SignUpAsUserTest extends BaseTest {
        String Password=new Faker().internet().password();
        registerPage.RegisterPage("",lastname,Email,Password);
        registerPage.register();
-       Thread.sleep(1000);
+     //  Thread.sleep(1000);
        Assert.assertEquals(registerPage.getFirstNameErrorMessage(),"First name:");
    }
 
@@ -39,7 +39,7 @@ public class SignUpAsUserTest extends BaseTest {
         String Password=new Faker().internet().password();
         registerPage.RegisterPage(firstname,"",Email,Password);
         registerPage.register();
-        Thread.sleep(1000);
+      //  Thread.sleep(1000);
         Assert.assertEquals(registerPage.getlastNameErrorMessage(),"Last name:");
     }
 
@@ -52,7 +52,7 @@ public class SignUpAsUserTest extends BaseTest {
         String Password=new Faker().internet().password();
         registerPage.RegisterPage(firstname,lastname,"",Password);
         registerPage.register();
-        Thread.sleep(1000);
+     //   Thread.sleep(1000);
         Assert.assertEquals(registerPage.getEmailErrorMessage(),"Email:");
     }
 
@@ -65,7 +65,7 @@ public class SignUpAsUserTest extends BaseTest {
         String Email=new Faker().internet().emailAddress();
         registerPage.RegisterPage(firstname,lastname,Email,"12345");
         registerPage.register();
-        Thread.sleep(1000);
+     //   Thread.sleep(1000);
         Assert.assertEquals(registerPage.getPasswordErrorMessage(),"Password:");
 
     }
@@ -82,7 +82,7 @@ public class SignUpAsUserTest extends BaseTest {
         String ConfirmPassword=new Faker().internet().password();
         registerPage.RegisterPage1(firstname,lastname,Email,Password,ConfirmPassword);
         registerPage.register();
-        Thread.sleep(1000);
+     //   Thread.sleep(1000);
         Assert.assertEquals(registerPage.getPasswordErrorMessage(),"Password:");
 
     }
@@ -91,7 +91,7 @@ public class SignUpAsUserTest extends BaseTest {
     public void Verify_that_usr_canNot_SignUp_EmptyData() throws InterruptedException{
         RegisterPage registerPage=new RegisterPage(driver);
         registerPage.register();
-        Thread.sleep(1000);
+     //   Thread.sleep(1000);
         Assert.assertEquals(registerPage.register1(),"");
 
     }

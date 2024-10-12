@@ -79,8 +79,8 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar"
                     </argLine>
-                    <parallel>classes</parallel>
-                    <threadCount>3</threadCount>
+                    <parallel>methods</parallel>
+                    <threadCount>1</threadCount>
                 </configuration>
                 <dependencies>
                     <dependency>
