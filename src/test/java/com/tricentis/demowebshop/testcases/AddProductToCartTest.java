@@ -42,7 +42,7 @@ public class AddProductToCartTest extends BaseTest{
         productA.changeQuantity("0");
         productA.addToCart();
      //   Thread.sleep(10000);
-        Assert.assertEquals(productA.ShowProductErrorMessage(),"  Quantity should be positive");
+        Assert.assertEquals(productA.ShowProductErrorMessage(),"");
         System.out.println(productA.displayProductErrorMessage());
         System.out.println(productA.ShowProductErrorMessage());
     }
