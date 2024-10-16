@@ -8,17 +8,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 @Feature("Register Feature")
 public class SignUpAsUserTest extends BaseTest {
-   @Test(description = "Verify Main Functionality",priority = 1)
-   public void shouldBeAbleToRegister() throws InterruptedException {
+   @Test(description = "Verify Main Functionality")
+   public void shouldBeAbleToRegister()  {
 
        RegisterPage registerPage= new RegisterPage(driver);
        registerPage.RegisterFN();
        registerPage.register_continueBU();
-       Thread.sleep(1000);
    }
 
-   @Test(description = "Verify_that_usr_canNot_SignUp_WithEmptyFirstName",priority = 2)
-    public void Verify_that_usr_canNot_SignUp_WithEmptyFirstName() throws InterruptedException {
+   @Test(description = "Verify_that_usr_canNot_SignUp_WithEmptyFirstName")
+    public void Verify_that_usr_canNot_SignUp_WithEmptyFirstName(){
        RegisterPage registerPage=new RegisterPage(driver);
        registerPage.gendermale();
        String lastname=new Faker().name().lastName();
@@ -26,12 +25,10 @@ public class SignUpAsUserTest extends BaseTest {
        String Password=new Faker().internet().password();
        registerPage.RegisterPage("",lastname,Email,Password);
        registerPage.register();
-     //  Thread.sleep(1000);
        Assert.assertEquals(registerPage.getFirstNameErrorMessage(),"First name:");
    }
-
-    @Test(description = "Verify_that_usr_canNot_SignUp_WithEmptylastName",priority = 3)
-    public void Verify_that_usr_canNot_SignUp_WithEmptylastName() throws InterruptedException {
+    @Test(description = "Verify_that_usr_canNot_SignUp_WithEmptylastName")
+    public void Verify_that_usr_canNot_SignUp_WithEmptylastName() {
         RegisterPage registerPage=new RegisterPage(driver);
         registerPage.gendermale();
         String firstname=new Faker().name().firstName();
@@ -39,12 +36,10 @@ public class SignUpAsUserTest extends BaseTest {
         String Password=new Faker().internet().password();
         registerPage.RegisterPage(firstname,"",Email,Password);
         registerPage.register();
-      //  Thread.sleep(1000);
         Assert.assertEquals(registerPage.getlastNameErrorMessage(),"Last name:");
     }
-
-    @Test(description = "Verify_that_usr_canNot_SignUp_WithEmptyEmail",priority = 4)
-    public void Verify_that_usr_canNot_SignUp_WithEmptyEmail() throws InterruptedException {
+    @Test(description = "Verify_that_usr_canNot_SignUp_WithEmptyEmail")
+    public void Verify_that_usr_canNot_SignUp_WithEmptyEmail()  {
         RegisterPage registerPage=new RegisterPage(driver);
         registerPage.gendermale();
         String firstname=new Faker().name().lastName();
@@ -52,12 +47,10 @@ public class SignUpAsUserTest extends BaseTest {
         String Password=new Faker().internet().password();
         registerPage.RegisterPage(firstname,lastname,"",Password);
         registerPage.register();
-     //   Thread.sleep(1000);
         Assert.assertEquals(registerPage.getEmailErrorMessage(),"Email:");
     }
-
-    @Test(description = "Verify_that_usr_canNot_SignUp_WithpasswordLessthan_sixchar",priority = 5)
-    public void Verify_that_usr_canNot_SignUp_WithpasswordLessthan_sixchar() throws InterruptedException{
+    @Test(description = "Verify_that_usr_canNot_SignUp_WithpasswordLessthan_sixchar")
+    public void Verify_that_usr_canNot_SignUp_WithpasswordLessthan_sixchar(){
         RegisterPage registerPage=new RegisterPage(driver);
         registerPage.gendermale();
         String firstname=new Faker().name().firstName();
@@ -65,14 +58,10 @@ public class SignUpAsUserTest extends BaseTest {
         String Email=new Faker().internet().emailAddress();
         registerPage.RegisterPage(firstname,lastname,Email,"12345");
         registerPage.register();
-     //   Thread.sleep(1000);
         Assert.assertEquals(registerPage.getPasswordErrorMessage(),"Password:");
-
     }
-
-    @Test(description = "Verify_that_usr_canNot_SignUp_WithThepassword_and_confirmationpassword_donot_match",priority = 6)
-    public void Verify_that_usr_canNot_SignUp_WithThepassword_and_confirmationpassword_donot_match() throws InterruptedException{
-
+    @Test(description = "Verify_that_usr_canNot_SignUp_WithThepassword_and_confirmationpassword_donot_match")
+    public void Verify_that_usr_canNot_SignUp_WithThepassword_and_confirmationpassword_donot_match() {
         RegisterPage registerPage=new RegisterPage(driver);
         registerPage.gendermale();
         String firstname=new Faker().name().firstName();
@@ -82,19 +71,12 @@ public class SignUpAsUserTest extends BaseTest {
         String ConfirmPassword=new Faker().internet().password();
         registerPage.RegisterPage1(firstname,lastname,Email,Password,ConfirmPassword);
         registerPage.register();
-     //   Thread.sleep(1000);
         Assert.assertEquals(registerPage.getPasswordErrorMessage(),"Password:");
-
     }
-
-    @Test(description = "Verify_that_usr_canNot_SignUp_EmptyData",priority = 7)
-    public void Verify_that_usr_canNot_SignUp_EmptyData() throws InterruptedException{
+    @Test(description = "Verify_that_usr_canNot_SignUp_EmptyData")
+    public void Verify_that_usr_canNot_SignUp_EmptyData() {
         RegisterPage registerPage=new RegisterPage(driver);
         registerPage.register();
-     //   Thread.sleep(1000);
         Assert.assertEquals(registerPage.register1(),"");
-
     }
-
-
 }

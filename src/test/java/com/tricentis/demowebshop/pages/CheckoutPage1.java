@@ -1,16 +1,10 @@
 package com.tricentis.demowebshop.pages;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
-
 public class CheckoutPage1 {
-
-
     @FindBy(css = "[id=\"BillingNewAddress_CountryId\"]")
     WebElement selectCountry;
     @FindBy(css = "[id=\"BillingNewAddress_City\"]")
@@ -23,12 +17,10 @@ public class CheckoutPage1 {
     WebElement phoneNumberInput;
     @FindBy(css = "[class=\"button-1 new-address-next-step-button\"]")
     WebElement clickContinue;
-
     @FindBy(css = "[id=\"PickUpInStore\"]")
     WebElement pickUp ;
     @FindBy(css = "[onclick=\"Shipping.save()\"]")
     WebElement continueButton;
-
     @FindBy(css = "[id=\"checkout-step-payment-method\"]")
     WebElement Paymentmethod;
     @FindBy(css = "[class=\"button-1 payment-method-next-step-button\"]")
@@ -43,14 +35,10 @@ public class CheckoutPage1 {
     WebElement PaymentInfoMes;
     @FindBy(css = "[onclick=\"PaymentInfo.save()\"]")
     WebElement continuePaymentInfo;
-
-
     @FindBy(css = "[onclick=\"ConfirmOrder.save()\"]")
     WebElement confirmOrder;
-
     @FindBy(css = "[onclick=\"setLocation('/')\"]")
     WebElement lastContinue;
-
     @FindBy(css = "[id=\"shippingoption_0\"]")
     WebElement ShippingmethodGround;
     @FindBy(css = "[id=\"shippingoption_1\"]")
@@ -70,6 +58,15 @@ public class CheckoutPage1 {
 
     @FindBy(css = "[id=\"PurchaseOrderNumber\"]")
     WebElement PurchaseOrderNumberField;
+
+    @FindBy(xpath = "//*[@id=\"ExpireYear\"]")
+    WebElement expireYear;
+
+
+    @FindBy(xpath = "//*[@id=\"ExpireMonth\"]")
+    WebElement expireMonth;
+
+
 
     public CheckoutPage1(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -175,18 +172,19 @@ public class CheckoutPage1 {
         CardNumberField("12344");
         CardCodeField("1234");
     }
-//    public void CardCodeField(){
-//        CardCodeField("1234");
-//    }
+    public void CardCodeField(){
+      CardCodeField("1234");
+   }
 public void PurchaseOrderNumberField(String PurchaseOrderNumber) {
     PurchaseOrderNumberField.sendKeys(PurchaseOrderNumber);
 }
-
-
-
-
-
-
-
+public void changeMonth(){
+    Select month = new Select(expireMonth);
+    month.selectByIndex(5);
+}
+    public void changeYear(){
+        Select year = new Select(expireYear);
+        year.selectByIndex(5);
+    }
 }
 

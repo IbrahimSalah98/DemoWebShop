@@ -1,24 +1,14 @@
 package com.tricentis.demowebshop.testcases;
-
-
 import com.tricentis.demowebshop.base.BaseTest;
-
 import com.tricentis.demowebshop.pages.LoginPage;
-
 import io.qameta.allure.Feature;
 import org.openqa.selenium.By;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 @Feature("Login Feature")
 public class LoginTest extends BaseTest {
-
-
-
     @Test (description = "Test the login function with valid email and password",priority = 1)
     public void shouldBeAbleToLoginWithEmailandPassword(){
-
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage =new LoginPage(driver);
         loginPage.loginFunction();
@@ -27,38 +17,22 @@ public class LoginTest extends BaseTest {
         Assert.assertEquals(logout , "Log out");
         loginPage.logoutBtn();
     }
-
-
     @Test(priority = 2)
     public void shouldNotBeAbleToLoginWhenEmailandPasswordAreBlank(){
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage =new LoginPage(driver);
         loginPage.checkErrorMessage();
     }
-
     @Test(priority = 3)
     public void shouldNotBeAbleToLoginWithValidEmailandInvalidPassword (){
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage =new LoginPage(driver);
         loginPage.loginFunctionWithInValidEmailandvalidPassword();
-
     }
-
-
     @Test(priority = 4)
     public void shouldNotBeAbleToLoginWithInvalidEmailandvalidPassword (){
         driver.get("https://demowebshop.tricentis.com/login");
         LoginPage loginPage =new LoginPage(driver);
         loginPage.loginFunctionWithInValidEmailandvalidPassword();
-
     }
-
-
-
-
-
-
-
-
-
 }
